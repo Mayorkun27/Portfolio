@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oluwamayokun</title>
+    
+    <link rel="stylesheet" href="tabler-icons/webfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="icon" href="images/img1.jpg">
+    <!-- Online bootstarp linking -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <!-- Offline bootstarp linking -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsiveness.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("U35dYKdKIqlpsGBAT");
+        })();
+
+        document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Collect form data
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const email = document.getElementById('email').value;
+      const number = document.getElementById('number').value;
+      const hired = document.getElementById('hired').value;
+      const message = document.getElementById('message').value;
+
+      // Send form data via EmailJS
+      emailjs.send('service_uurl164', 'template_ecowew1', {
+          Firstname: firstName,
+          Lastname: lastName,
+          Email: email,
+          Phonenumber: number,
+          Hired: hired,
+          Message: message
+      }, 'U35dYKdKIqlpsGBAT')
+      .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+          form.reset();
+      }, (error) => {
+          console.error('FAILED...', error);
+          alert('Failed to send message. Please try again later.');
+      });
+  });
+});
+    </script>
+</head>
+<body>
+    
+    <!-- <div class="terminal-loader">
+        <div class="loader">Oluwamayokun...</div>
+    </div> -->
+      
+    <main class="mainContent">
+                
+        <div class="overflow-x-hidden">
+            
+            <nav class="navbar navbar-expand-lg bg-transparent fixed-to mb-">
+                <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <div class="logo">
+                        <i class="ti ti-circle-filled"></i>
+                    </div>
+                    <span class="fw-bold">Oluwamayokun</span>
+                </a>
+                <button class="navbar-toggler border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-capitalize fw-bold d-flex gap-4 align-items-center ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-0" aria-current="page" href="#services">services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#recents">works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#resume">resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#skills">skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#testimonials">testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#blog">blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#contact">contact</a>
+                    </li>
+                    </ul>
+                </div>
+                <form class="ms-0 ms-lg-5">
+                    <button class="btn nav-btn px-4 py-2 text-light fw-bold"><a href="#contact" class="text-light">Hire Me!</a></button>
+                </form>
+                </div>
+            </nav>
+
+            <section class="herosection py-5">
+                <div class="container">
+                    <div class="row align-items-center h-100">
+                        <div class="col col-lg-6 col-md-6 col-12">
+                            <div class="card bg-transparent text-light mt-lg-5 py-3 pe-3">
+                                <h3 class="card-intro">I'm Oluwamayokun</h3>
+                                <h1 class="card-title stack fw-bold" style="font-size: 2.8rem;">Front End Web Developer</h1>
+                                <p class="card-text lh-4 mt-2"> I break down complex user-experience problems to create integritiy-focused solutions that connect billions of people</p>
+                                <div class="card-btn mt-3 d-grid d-lg-flex align-items-center gap-4 gap-lg-3">
+                                    <div class="download">
+                                        <button class="btn px-4 py-2">
+                                            <a href="#" class="">Download CV <i class="ti ti-download"></i></a>
+                                        </button>
+                                    </div>
+                                    <div class="socials d-flex align-items-center gap-3">
+                                        <a href="#">
+                                            <i class="ti ti-brand-github"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="ti ti-brand-x"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="ti ti-brand-instagram"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="ti ti-brand-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col hero-img">
+                            <div class="img-fluid myimage mt-4 mt-lg-0 text-center">
+                                <!-- <img src="images/img.png" class="mx-auto" alt="..."> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stats py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-3 col-md-6 col-6">
+                            <div data-aos="fade-up" class="card mt-3">
+                                <h3 class="card-title fs-1 fw-bold">1</h3>
+                                <p class="text-capitalize">year of experience</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-6">
+                            <div data-aos="fade-up" class="card mt-3">
+                                <h3 class="card-title fs-1 fw-bold">30+</h3>
+                                <p class="text-capitalize">projects completed</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-6">
+                            <div data-aos="fade-up" class="card mt-3">
+                                <h3 class="card-title fs-1 fw-bold">40+</h3>
+                                <p class="text-capitalize spec">happy clients</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-6 col-6">
+                            <div data-aos="fade-up" class="card mt-3">
+                            <h3 class="card-title fs-1 fw-bold">14</h3>
+                            <p class="text-capitalize">years of experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="services py-5" id="services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-12">
+                            <div class="card bg-transparent text-center">
+                                <h1 class="card-title text-capitalize services-h1 fw-bold">my quality services</h1>
+                                <p class="card-text ab text-light mx-auto">We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.</p>
+                            </div>
+                        </div>
+                        <div class="col col-12 mt-4">
+                            <div data-aos="fade-up-right" class="card service-card py-5 mt-3 mt-lg-0 px-4">
+                                <div class="serve-right d-flex gap-3 align-items-center">
+                                    <div class="num fs-4 fw-bold">01</div>
+                                    <h3 class="title fs-3 fw-bold">Web Design</h3>
+                                    <i class="ti ti-arrow-up-right fs-2 arrow1 d-lg-none"></i>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center serve-left">
+                                    <div class="text">I break down complex user experience problems to create integrity focused solutions that connect billions of people</div>
+                                    <div class="icon">
+                                        <i class="ti ti-arrow-up-right fs-2 arrow2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-12">
+                            <div data-aos="fade-up-right" class="card service-card py-5 mt-3 mt-lg-0 px-4">
+                                <div class="serve-right d-flex gap-3 align-items-center">
+                                    <div class="num fs-4 fw-bold">02</div>
+                                    <h3 class="title fs-3 fw-bold">Web Development</h3>
+                                    <i class="ti ti-arrow-up-right fs-2 arrow1 d-lg-none"></i>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center serve-left">
+                                    <div class="text">I break down complex user experience problems to create integrity focused solutions that connect billions of people</div>
+                                    <div class="icon">
+                                        <i class="ti ti-arrow-up-right fs-2 arrow2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-12">
+                            <div data-aos="fade-up-right" class="card service-card py-5 mt-3 mt-lg-0 px-4">
+                                <div class="serve-right d-flex gap-3 align-items-center">
+                                    <div class="num fs-4 fw-bold">03</div>
+                                    <h3 class="title fs-3 fw-bold">Responsive Design</h3>
+                                    <i class="ti ti-arrow-up-right fs-2 arrow1 d-lg-none"></i>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center serve-left">
+                                    <div class="text">I break down complex user experience problems to create integrity focused solutions that connect billions of people</div>
+                                    <div class="icon">
+                                        <i class="ti ti-arrow-up-right fs-2 arrow2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-12">
+                            <div data-aos="fade-up-right" class="card service-card py-5 mt-3 mt-lg-0 px-4">
+                                <div class="serve-right d-flex gap-3 align-items-center">
+                                    <div class="num fs-4 fw-bold">04</div>
+                                    <h3 class="title fs-3 fw-bold">Trendy Designs</h3>
+                                    <i class="ti ti-arrow-up-right fs-2 arrow1 d-lg-none"></i>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center serve-left">
+                                <div class="text">I break down complex user experience problems to create integrity focused solutions that connect billions of people</div>
+                                    <div class="icon">
+                                        <i class="ti ti-arrow-up-right fs-2 arrow2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recents py-5" id="recents">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card bg-transparent text-center">
+                                <h1 class="card-title text-capitalize recents-h1">my recent works</h1>
+                                <p class="card-text text-light mx-auto" style="width: 63%;">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row recent justify-content-between p-3">
+                        <div class="col col-12">
+                            <div class="mt-4 mt-lg-0 mt-md-0" data-aos="slide-left"  data-aos-duration="3000">
+                                <swiper-container class="mySwiper" autoplay space-between="30" slides-per-view="auto" pagination="true" pagination-clickable="true">
+                                    <swiper-slide>
+                                        <img src="images/img9.png" alt="..." class="img-fluid">
+                                    </swiper-slide>
+                                    <swiper-slide>
+                                        <img src="images/img11.png" alt="..." class="img-fluid">
+                                    </swiper-slide>
+                                    <swiper-slide>
+                                        <img src="images/img10.jpeg" alt="..." class="img-fluid">
+                                    </swiper-slide>
+                                    <swiper-slide>
+                                        <img src="images/img13.jpeg" alt="..." class="img-fluid">
+                                        <img src="images/img13.png" alt="..." class="img-fluid">
+                                        <img src="images/img14.png" alt="..." class="img-fluid">
+                                    </swiper-slide>
+                                    <swiper-slide>Slide 5</swiper-slide>
+                                    <swiper-slide>Slide 6</swiper-slide>
+                                    <swiper-slide>Slide 7</swiper-slide>
+                                    <swiper-slide>Slide 8</swiper-slide>
+                                    <swiper-slide>Slide 9</swiper-slide>
+                                </swiper-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume py-5" id="resume">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-6 col-md-6 col-12 mt-5 pt-5">
+                            <div class="card bg-transparent">
+                                <h1 class="card-title text-capitalize resume-h1"><i class="fa fa-award"></i> my experience</h1>
+                            </div>
+                            <div data-aos="fade-up-right" data-aos-duration="2000" class="card bg-transparent resume-card mt-4 p-3">
+                                <h5 class="card-intro text-capitalize fw-bold">2022 - present</h5>
+                                <h3 class="text-capitalize">lead developer</h3>
+                                <p class="card-text text-capitalize">minnesota, USA</p>
+                            </div>
+                            <div data-aos="fade-up-right" data-aos-duration="2000" class="card bg-transparent resume-card mt-4 p-3">
+                                <h5 class="card-intro text-capitalize fw-bold">2022 - present</h5>
+                                <h3 class="text-capitalize">lead developer</h3>
+                                <p class="card-text text-capitalize">minnesota, USA</p>
+                            </div>
+                            <div data-aos="fade-up-right" data-aos-duration="2000" class="card bg-transparent resume-card mt-4 p-3">
+                                <h5 class="card-intro text-capitalize fw-bold">2022 - present</h5>
+                                <h3 class="text-capitalize">lead developer</h3>
+                                <p class="card-text text-capitalize">minnesota, USA</p>
+                            </div>
+                            <div data-aos="fade-up-right" data-aos-duration="2000" class="card bg-transparent resume-card mt-4 p-3">
+                                <h5 class="card-intro text-capitalize fw-bold">2022 - present</h5>
+                                <h3 class="text-capitalize">lead developer</h3>
+                                <p class="card-text text-capitalize">minnesota, USA</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-6 col-md-6 col-12 mt-5 pt-5">
+                            <div class="card bg-transparent">
+                                <h1 class="card-title text-capitalize resume-h1"><i class="fa fa-graduation-cap"></i> my education</h1>
+                            </div>
+                            <div data-aos="fade-up-left" data-aos-duration="2000" class="card bg-transparent resume-card mt-4 p-3">
+                                <h5 class="card-intro text-capitalize fw-bold">2022 - present</h5>
+                                <h3 class="text-capitalize">lead developer</h3>
+                                <p class="card-text text-capitalize">minnesota, USA</p>
+                            </div>
+                            <div data-aos="fade-up-left" data-aos-duration="2000" class="card bg-transparent resume-card mt-4 p-3">
+                                <h5 class="card-intro text-capitalize fw-bold">2022 - present</h5>
+                                <h3 class="text-capitalize">lead developer</h3>
+                                <p class="card-text text-capitalize">minnesota, USA</p>
+                            </div>
+                            <div data-aos="fade-up-left" data-aos-duration="2000" class="card bg-transparent resume-card mt-4 p-3">
+                                <h5 class="card-intro text-capitalize fw-bold">2022 - present</h5>
+                                <h3 class="text-capitalize">lead developer</h3>
+                                <p class="card-text text-capitalize">minnesota, USA</p>
+                            </div>
+                            <div data-aos="fade-up-left" data-aos-duration="2000" class="card bg-transparent resume-card mt-4 p-3">
+                                <h5 class="card-intro text-capitalize fw-bold">2022 - present</h5>
+                                <h3 class="text-capitalize">lead developer</h3>
+                                <p class="card-text text-capitalize">minnesota, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skill py-5" id="skills">
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-12 mb-5">
+                            <div class="card bg-transparent text-center">
+                                <h1 class="card-title text-capitalize fw-bold skill-h1">my skills</h1>
+                                <p class="card-text text-light mx-auto" style="width: 63%;">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-2 col-md-4 col-12">
+                            <div data-aos="fade-up" data-aos-duration="3000" class="card text-center mb-4 bg-transparent skill-card text-light">
+                                <div class="card-img skill-img py-4">
+                                    <i class="fab fa-5x fa-html5"></i>
+                                </div>
+                                <div class="card-text fw-bold py-2">HTML5</div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-2 col-md-4 col-12">
+                            <div data-aos="fade-up" data-aos-duration="3000" class="card text-center mb-4 bg-transparent skill-card text-light">
+                                <div class="card-img skill-img py-4">
+                                    <i class="fab fa-5x fa-css3"></i>
+                                </div>
+                                <div class="card-text fw-bold py-2">CSS3</div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-2 col-md-4 col-12">
+                            <div data-aos="fade-up" data-aos-duration="3000" class="card text-center mb-4 bg-transparent skill-card text-light">
+                                <div class="card-img skill-img py-4">
+                                    <i class="fab fa-5x fa-bootstrap"></i>
+                                </div>
+                                <div class="card-text fw-bold py-2">Bootstrap5</div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-2 col-md-4 col-12">
+                            <div data-aos="fade-up" data-aos-duration="3000" class="card text-center mb-4 bg-transparent skill-card text-light">
+                                <div class="card-img skill-img py-4">
+                                    <i class="fab fa-5x fa-js"></i>
+                                </div>
+                                <div class="card-text fw-bold py-2">Javascript</div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-2 col-md-4 col-12">
+                            <div data-aos="fade-up" data-aos-duration="3000" class="card text-center mb-4 bg-transparent skill-card text-light">
+                                <div class="card-img skill-img py-4">
+                                    <i class="fab fa-5x fa-node"></i>
+                                </div>
+                                <div class="card-text fw-bold py-2">Node JS</div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-2 col-md-4 col-12">
+                            <div data-aos="fade-up" data-aos-duration="3000" class="card text-center mb-4 bg-transparent skill-card text-light">
+                                <div class="card-img skill-img pt-4">
+                                    <div class=" d-flex align-items-center justify-content-center gap-2 pb-4">
+                                        <i class="fab fa-5x fa-mdb"></i>
+                                        <i class="fa fa-2x fa-database"></i>
+                                    </div>
+                                </div>
+                                <div class="card-text fw-bold py-2">MongoDb</div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-2 col-md-4 col-12">
+                            <div data-aos="fade-up" data-aos-duration="3000" class="card text-center mb-4 bg-transparent skill-card text-light">
+                                <div class="card-img skill-img py-4">
+                                    <i class="fab fa-5x fa-php"></i>
+                                </div>
+                                <div class="card-text fw-bold py-2">PHP</div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-2 col-md-4 col-12">
+                            <div data-aos="fade-up" data-aos-duration="3000" class="card text-center mb-4 bg-transparent skill-card text-light">
+                                <div class="card-img skill-img py-4">
+                                    <i class="fab fa-5x fa-laravel"></i>
+                                </div>
+                                <div class="card-text fw-bold py-2">Laravel</div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-2 col-md-4 col-12">
+                            <div data-aos="fade-up" data-aos-duration="3000" class="card text-center mb-4 bg-transparent skill-card text-light">
+                                <div class="card-img skill-img py-4">
+                                    <i class="fab fa-5x fa-react"></i>
+                                </div>
+                                <div class="card-text fw-bold py-2">React</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stories py-5" id="testimonials">
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col col-lg-6 col-md-12 col-12">
+                            <div data-aos="fade-right" data-aos-duration="3000" class="card bg-transparent">
+                                <h1 class="card-title text-capitalize m-0 fw-bold stories-h1">My Client's Stories</h1>
+                                <p class="card-text text-light w-75">Empowering people in new a digital journey with my super services.</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-6 col-md-12 col-12 mt-5 mt-lg-0 mt-md-0">
+                            <swiper-container class="mySwiper" pagination="true" navigation="true" pagination-clickable="false" space-between="10" slides-per-view="2">
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <div data-aos="zoom-in" data-aos-duration="3000" class="card w-100 stories-card text-light p-2">
+                                        <div class="card-top d-flex justify-content-between">
+                                            <p class="d-flex gap-1">
+                                                <i class="fab fa-xbox fa-2x"></i>
+                                                <span class="text-capitalize fw-bold">company</span>
+                                            </p>
+                                            <div class="card-img" style="width: 40%; height: max-content;">
+                                                <img src="images/img1.jpg" width="100%" height="100vh" style="border-radius: 3px; border-bottom-left-radius: 50px;" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="card-text lh-2">
+                                            <p style="color: #7947df;"><i class="fa fa-caret-left fa-2x"></i><i class="fa fa-caret-right fa-2x"></i></p>
+                                            <p class="">&ldquo;&nbsp;Oluwamayokun is a professional developer, he really helps my business by providing value to my business.</p>
+                                        </div>
+                                        <div class="card-btom mt-3">
+                                            <h5 class="text-capitalize fw-bold">tim bailey</h5>
+                                            <p class="text-capitalize">SEO specialist, theme junction</p>
+                                        </div>
+                                    </div>
+                                </swiper-slide>
+                            </swiper-container>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section class="blogs py-5" id="blog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card bg-transparent text-center py-3">
+                                <h1 class="card-title text-capitalize m-0 fw-bold blog-h1">My Client's Stories</h1>
+                                <p class="card-text mx-auto text-light w-75">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                        <a href="#">
+                            <div data-aos="flip-right" data-aos-duration="3000" class="card blog-card mt-4 text-light p-3" style="background: url(images/img6.jpg);">
+                                <div class="card-top">
+                                    <button class="btn text-capitalize">tutorial</button>
+                                </div>
+                                <div class="card-mid my-5 py-5"></div>
+                                <div class="card-text p-3 lh-2">
+                                    <div class="text1 d-flex gap-3">
+                                        <p class="m-0 text-capitalize fw-bold">
+                                            <i class="fa fa-calendar-days"></i>
+                                            <span>Mar 01, 2024</span>
+                                        </p>
+                                        <p class="m-0 text-capitalize fw-bold">
+                                            <i class="fa fa-comments"></i>
+                                            <span>comment(0)</span>
+                                        </p>
+                                    </div>
+                                    <div class="text2 mt-1">
+                                        <h4 class="m-0 p-0 fw-bold">Top 10 web developers</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="#">
+                                <div data-aos="flip-down" data-aos-duration="3000" class="card blog-card mt-4 text-light p-3" style="background: url(images/img7.jpg);">
+                                    <div class="card-top">
+                                        <button class="btn text-capitalize">tips</button>
+                                    </div>
+                                    <div class="card-mid my-5 py-5"></div>
+                                    <div class="card-text p-3 lh-2">
+                                        <div class="text1 d-flex gap-3">
+                                            <p class="m-0 text-capitalize fw-bold">
+                                                <i class="fa fa-calendar-days"></i>
+                                                <span>Mar 01, 2024</span>
+                                            </p>
+                                            <p class="m-0 text-capitalize fw-bold">
+                                                <i class="fa fa-comments"></i>
+                                                <span>comment(0)</span>
+                                            </p>
+                                        </div>
+                                        <div class="text2 mt-1">
+                                            <h4 class="m-0 p-0 fw-bold">Top 10 skills</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="#">
+                                <div data-aos="flip-left" data-aos-duration="3000" class="card blog-card mt-4 text-light p-3" style="background: url(images/img8.jpg);">
+                                    <div class="card-top">
+                                        <button class="btn text-capitalize">freebies</button>
+                                    </div>
+                                    <div class="card-mid my-5 py-5"></div>
+                                    <div class="card-text p-3 lh-2">
+                                        <div class="text1 d-flex gap-3">
+                                            <p class="m-0 text-capitalize fw-bold">
+                                                <i class="fa fa-calendar-days"></i>
+                                                <span>Mar 01, 2024</span>
+                                            </p>
+                                            <p class="m-0 text-capitalize fw-bold">
+                                                <i class="fa fa-comments"></i>
+                                                <span>comment(0)</span>
+                                            </p>
+                                        </div>
+                                        <div class="text2 mt-1">
+                                            <h4 class="m-0 p-0 fw-bold">Highest paying jobs</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section class="contact py-5" id="contact">
+                <div class="container my-4">
+                    <div class="row align-items-center justify-content-between contact-row">
+                        <div class="col col-lg-6 col-md-6 col-12 mt-5 p-0">
+                            <div class="contact-right p-5">
+                                <div class="card bg-transparent">
+                                    <h1 class="card-title text-capitalize m-0 fw-bold contact-h1">let's work together!</h1>
+                                    <p class="card-text text-light">I design and code beautifully simple things and i love what i do. Just simple like that!.</p>
+                                </div>
+                                <form id="contactForm" class="d-grid gap-3">
+                                    <div class="form-top gap-3" style="width: 100%;">
+                                        <input type="text" name="firstName" id="firstName" placeholder="first name" class="w-100">
+                                        <input type="text" name="lastName" id="lastName" placeholder="last name" class="w-100">
+                                        <input type="email" name="email" id="email" placeholder="email address" class="w-100">
+                                        <input type="tel" name="number" id="number" placeholder="phone number" class="w-100">
+                                    </div>
+                                    <div class="form-btom d-grid gap-3">
+                                        <select name="hired" id="hired" required class="w py-2 fw-bold">
+                                            <option value="" selected disabled>Choose Services</option>
+                                            <option class="text-capitalize" value="Web Development">Web Development</option>
+                                            <option class="text-capitalize" value="Responsive design for existing website">Responsive design for existing website</option>
+                                            <option class="text-capitalize" value="Re-development">Re-development</option>
+                                            <option class="text-capitalize" value="Error troubleshooting">Error troubleshooting</option>
+                                        </select>
+                                        <textarea type="text" name="message" id="message" placeholder="message" cols="20" rows="7" class="w-100 pt-2"></textarea>
+                                    </div>
+                                    <button class="btn contact-btn text-capitalize fw-bold" style="height: 150%; width: 40%;" type="submit">send message</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col col-lg-5 col-md-6 col-12 mt-5">
+                            <div class="contact-left d-grid gap-3 justify-content-center">
+                                <div class="card d-flex flex-row align-items-center gap-3 bg-transparent text-light">
+                                    <div data-aos-duration="3000" data-aos="fade-right"  class="card-icon p-3">
+                                        <i class="ti ti-phone-call fa-2x"></i>
+                                    </div>
+                                    <div class="card-info p-3">
+                                        <p data-aos-duration="3000" data-aos="fade-down" class="m-0 fw-bold">Phone</p>
+                                        <h5 data-aos-duration="3000" data-aos="fade-left" class="fw-bold"><a class="text-light" href="tel:+2347081696490">+234 708 169 6490</a></h5>
+                                    </div>
+                                </div>
+                                <div class="card d-flex flex-row align-items-center gap-3 bg-transparent text-light">
+                                    <div data-aos-duration="3000" data-aos="fade-right" class="card-icon p-3">
+                                        <i class="ti ti-mail fa-2x"></i>
+                                    </div>
+                                    <div class="card-info p-3">
+                                        <p data-aos-duration="3000" data-aos="fade-down" class="m-0 fw-bold">Email</p>
+                                        <h5 data-aos-duration="3000" data-aos="fade-left" class="fw-bold"><a class="text-light" href="mailto:adelekeoluwamayokun27@gmail.com" style="line-height: 5px;">adelekeoluwamayokun27<span class="d-lg-none d-block">&nbsp;</span>@gmail.com</a></h5>
+                                    </div>
+                                </div>
+                                <div class="card d-flex flex-row align-items-center gap-3 bg-transparent text-light">
+                                    <div data-aos-duration="3000" data-aos="fade-right" class="card-icon p-3">
+                                        <i class="fa fa-location-dot fa-2x"></i>
+                                    </div>
+                                    <div class="card-info p-3">
+                                        <p data-aos-duration="3000" data-aos="fade-down" class="m-0 fw-bold">Address</p>
+                                        <h5 data-aos-duration="3000" data-aos="fade-left" class="fw-bold"><a class="text-light" href="http://googlemaps.com">Warne Park Street Pine, FL 33157, New York</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer pt-5" id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-12 col-md-12 col-12 text-center">
+                            <div class="footer-img mx-auto py-4">
+                                <div class="logo">
+                                    <i class="ti ti-circle-filled"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-12 col-md-12 col-12">
+                            <nav class="navbar navbar-expand-lg bg-transparent">
+                                <div class="container">
+                                    <ul class="navbar-nav text-capitalize fw-bold d-flex gap-5 align-items-center mx-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link p-0" aria-current="page" href="#">services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link p-0" href="#">works</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link p-0" href="#">resume</a>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link p-0" href="#">skills</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link p-0" href="#">testimonials</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link p-0" href="#">contact</a>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col col-lg-12 col-md-12 col-12 text-center py-3">
+                            <p class="fw-bold copyright fs-5">&copy; 2024 Oluwamayokun</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+        <a href="#" class="img-fluid">
+            <div class="backToTop p-3">
+                <i class="fa fa-arrow-up-long fa-1x"></i>
+            </div>
+        </a>
+
+    </main>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- Online bootstarp linking -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+    <!-- Offline bootstarp linking -->
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

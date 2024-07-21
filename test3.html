@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("U35dYKdKIqlpsGBAT");
+        })();
+    </script>
+    <script>
+        // script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Collect form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Send form data via EmailJS
+        emailjs.send('service_uurl164', 'template_ecowew1', {
+            name: name,
+            email: email,
+            message: message
+        }, 'U35dYKdKIqlpsGBAT')
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Message sent successfully!');
+            form.reset();
+        }, (error) => {
+            console.error('FAILED...', error);
+            alert('Failed to send message. Please try again later.');
+        });
+    });
+});
+
+    </script>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    
+</body>
+</html>
