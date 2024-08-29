@@ -1,11 +1,11 @@
 AOS.init();
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   setTimeout(function() {
-//     document.querySelector('.terminal-loader').style.display = 'none';
-//     document.querySelector('.mainContent').style.display = 'block';
-//   }, 1000);
-// });
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+    document.querySelector('.terminal-loader').style.display = 'none';
+    document.querySelector('.mainContent').style.display = 'block';
+  }, 1000);
+});
 
 let prevScrollPos = window.pageYOffset;
 const backToTop = document.querySelector(".backToTop");

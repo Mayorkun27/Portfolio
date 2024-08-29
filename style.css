@@ -483,6 +483,6 @@ footer .col .copyright{
       blinkCursor 01s step-end infinite alternate;
     margin-top: 1.5em;
   }
-  /* .mainContent{
+  .mainContent{
     display: none;
-  } */
+  }
