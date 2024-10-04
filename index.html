@@ -13,46 +13,62 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://kit.fontawesome.com/9d8bd846f3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/1.35.0/iconfont/tabler-icons.min.css" integrity="sha512-tpsEzNMLQS7w9imFSjbEOHdZav3/aObSESAL1y5jyJDoICFF2YwEdAHOPdOr1t+h8hTzar0flphxR76pd0V1zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
             emailjs.init("U35dYKdKIqlpsGBAT");
-        })();
+        })();   
 
         document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contactForm');
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
 
-  form.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevent the default form submission
+            form.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent the default form submission
 
-      // Collect form data
-      const firstName = document.getElementById('firstName').value;
-      const lastName = document.getElementById('lastName').value;
-      const email = document.getElementById('email').value;
-      const number = document.getElementById('number').value;
-      const hired = document.getElementById('hired').value;
-      const message = document.getElementById('message').value;
+                // Collect form data
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const email = document.getElementById('email').value;
+                const number = document.getElementById('number').value;
+                const hired = document.getElementById('hired').value;
+                const message = document.getElementById('message').value;
 
-      // Send form data via EmailJS
-      emailjs.send('service_uurl164', 'template_ecowew1', {
-          Firstname: firstName,
-          Lastname: lastName,
-          Email: email,
-          Phonenumber: number,
-          Hired: hired,
-          Message: message
-      }, 'U35dYKdKIqlpsGBAT')
-      .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
-          alert('Message sent successfully!');
-          form.reset();
-      }, (error) => {
-          console.error('FAILED...', error);
-          alert('Failed to send message. Please try again later.');
-      });
-  });
-});
-    </script> -->
+                // Send form data via EmailJS
+                emailjs.send('service_uurl164', 'template_ecowew1', {
+                    Firstname: firstName,
+                    Lastname: lastName,
+                    Email: email,
+                    Phonenumber: number,
+                    Hired: hired,
+                    Message: message
+                }, 'U35dYKdKIqlpsGBAT')
+                .then((response) => {
+                    // console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Show success popup
+                    showPopup(successMessage);
+                    form.reset();
+                }, (error) => {
+                    // console.error('FAILED...', error);
+                    
+                    // Show error popup
+                    showPopup(errorMessage);
+                });
+            });
+
+            // Function to show and auto-hide the popup
+            function showPopup(popupElement) {
+                popupElement.classList.add('show');
+                
+                // Auto-hide after 3 seconds
+                setTimeout(() => {
+                    popupElement.classList.remove('show');
+                }, 3000);
+            }
+        });
+    </script>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsiveness.css">
@@ -645,6 +661,14 @@
                     </div>
                 </div>
             </section>
+
+            <div class="message-popup success" id="successMessage">
+                <p>Message sent successfully!</p>
+            </div>
+            
+            <div class="message-popup error" id="errorMessage">
+                <p>Failed to send message. Please try again later.</p>
+            </div>
 
             <footer class="footer pt-5" id="footer">
                 <div class="container">
