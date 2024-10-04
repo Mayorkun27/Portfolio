@@ -1,27 +1,20 @@
-@media (min-width:300px) and (max-width:766px) {
+@media (min-width:200px) and (max-width:991px) {
     .skill-card{
         width: 80%;
     }
-    .contact-row{
-        flex-direction: column-reverse;
+    .herosection{
+        height: max-content;
     }
-    .form-top{
-        grid-template-columns: 1fr;
+    .contact-left p,
+    .contact-left h5{
+        font-size: 12px;
     }
-    .contact form .contact-btn{
-        width: 100vw;
-    }
-    .herosection .hero-img{
-        width: 100% !important;
+    .herosection .myimage{
+        rotate: 0deg;
+        border-color: #7947df;
     }
     .stats .card p{
         width: 100% !important;
-    }
-    .stats .card{
-        align-items: center !important;
-        padding-left: 1.5rem;
-        display: grid;
-        gap: 0rem;
     }
     .service-card{
         grid-row: span 2;
@@ -30,34 +23,75 @@
     .stats .card{
         align-items: center !important;
     }
-    .services .card p.ab{
+    .skill .card p.ab,
+    .recents .card p.ab,
+    .services .card p.ab,
+    .contact .card p.ab{
         width: 100% !important;
-    }
-    .serve-left .arrow2{
-        display: none;
     }
     .serve-left .text{
        width: 100%;
     }
 }
 
-@media (min-width:767px) and (max-width:785px) {
-    .herosection .hero-img{
-        width: 50%;
+@media (min-width:200px) and (max-width:767px) {
+    .herosection .myimage{
+        height: 50vh !important;
+    }
+    .recents .recent swiper-slide {
+        width: 100% !important;
+    }
+    .footer .navbar-nav{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        li{
+            text-align: center !important;
+        }
+    }
+    .recents .recent swiper-slide:nth-child(2n) {
+        width: 100% !important;
+    }
+    .recents .recent swiper-slide:nth-child(3n) {
+        width: 100% !important;
+    }
+    .resume-card{
+        width: 90%;
+    }
+    .stories .row swiper-slide {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-@media (min-width:768px) and (max-width:992px) {
+@media (min-width:768px) and (max-width:991px) {
     .stats .card{
         align-items: center !important;
+    }
+    .footer .navbar-nav{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        li{
+            text-align: center !important;
+        }
+    }
+    .contact .card p.ab{
+        width: 80% !important;
     }
     .services .card .ab{
         width: 100%;
     }
+    .herosection .myimage{
+        height: 40vh !important;
+    }
 }
 
-@media (min-width:767px) and (max-width:1024px) {
-    .serve-right .arrow1{
-        display: none;
+@media (min-width:200px) and (max-width:475px) {
+    .bi-geo-alt{
+        transform: translateX(-10px) !important;
+    }
+    .ddd{
+        transform: translateX(-16px) !important;
     }
 }
