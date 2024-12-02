@@ -9,11 +9,11 @@ html {
 }
 .backToTop {
     position: fixed;
-    background: #140c1c;
-    color: #7947df;
     bottom: 10%;
     z-index: 99;
     right: 5%;
+    background: #140c1c;
+    color: #7947df;
     width: 50px;
     height: 50px;
     font-size: 20px;
@@ -588,6 +588,7 @@ footer .copyright{
     content: '';
     position: absolute;
     width: 24px;
+    z-index: 2000;
     height: 2px;
     left: -25px !important;
     top: 10px !important;

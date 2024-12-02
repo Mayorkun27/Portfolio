@@ -1,5 +1,6 @@
 AOS.init();
 
+
 // document.addEventListener("DOMContentLoaded", function() {
 //   setTimeout(function() {
 //     document.querySelector('.terminal-loader').style.display = 'none';
@@ -26,8 +27,6 @@ window.onscroll = function() {
 
   prevScrollPos = currentScrollPos;
 };
-
-
 
 
 const menuIcon = document.getElementById('menu-icon');
