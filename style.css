@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: 1px;
     font-family: 'Courier New', Courier, monospace !important;
 }
 html {
@@ -350,7 +351,7 @@ footer .copyright{
     box-shadow: 5px 5px 5px #0f0715;
 }
 .contact form .contact-btn{
-    width: 150px !important;
+    width: 200px !important;
     height: 50px !important;
     font-weight: bold;
     text-transform: capitalize;
@@ -584,6 +585,7 @@ footer .copyright{
 }
 #menu-icon{
     cursor: pointer;
+    font-size: 5rem !important;
     transition: all 0.4s ease;
 }
 #menu-icon.open{
@@ -622,7 +624,7 @@ footer .copyright{
     padding: 15px 25px;
     border-radius: 10px;
     color: #fff;
-    z-index: 1000;
+    z-index: -10;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateY(-20px);
@@ -641,6 +643,7 @@ footer .copyright{
 }
 .message-popup.show{
     opacity: 1;
+    z-index: 1000 !important;
     transform: translateY(0);
 }
 
@@ -648,7 +651,7 @@ footer .copyright{
 
 /* Modal styles */
 .recent #imageModal{
-    /* display: none; Hidden by default */
+    display: none;
     position: fixed;
     z-index: 99;
     left: 0;
@@ -661,8 +664,9 @@ footer .copyright{
     align-items: center;
 }
 #imageModal .modal-content{
-    border: 2px solid #7947df;
+    border: 2px solid #30185e;
     background-color: #140c1c;
+    /* 0f0715 */
     margin: auto;
     max-width: 50%;
     max-height: 80%;
