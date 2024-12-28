@@ -130,6 +130,32 @@
                     </div>
                 </div>
             </nav>
+
+            <div class="mobile-view">
+                <ul class="navbar-nav h-75 text-capitalize fw-bold d-flex flex-column gap-4 align-items-center justify-content-between">
+                    <li class="nav-item">
+                        <a class="nav-link p-0" aria-current="page" href="#services">services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#recents">works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#resume">resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#skills">skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#testimonials">testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#contact">contact</a>
+                    </li>
+                </ul>
+                <div class="text-light position-absolute p-3" id="closeMobileNav">
+                    <i class="bi bi-x text-light fs-1"></i>
+                </div>   
+            </div>
             
             <section class="herosection py-5">
                 <div class="container">
@@ -269,7 +295,7 @@
                 </div>
             </section>
 
-           <!-- <section class="recents py-5" id="recents">
+            <section class="recents py-5" id="recents">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 mb-5">
@@ -279,8 +305,7 @@
                             </div>
                         </div>
                     </div>
-                    <link rel="stylesheet" href="slider.css">
-                    <div class="row recent justify-content-between p-3">
+                    <div class="row recent justify-content-between p-3 recent-imgs">
                         <!-- <div class="col col-12">
                             <div class="banner">
                                 <div class="slider" style="--quantity: 10">
@@ -361,34 +386,33 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div class="col col-lg-6 col-md-6 col-12 mx-auto my-3">
-                            <div class="card-img">
+                        <div class="col-lg-6 col-md-6 col-12 mx-auto my-3">
+                            <div class="card-img recent-img">
                                 <img src="images/img22.png" alt=".." class="img-fluid">
                             </div>
                         </div>
-                        <div class="col col-lg-6 col-md-6 col-12 mx-auto my-3">
-                            <div class="card-img">
+                        <div class="col-lg-6 col-md-6 col-12 mx-auto my-3">
+                            <div class="card-img recent-img">
                                 <img src="images/img23.jpg" alt=".." class="img-fluid">
                             </div>
                         </div>
-                        <div class="col col-lg-6 col-md-6 col-12 mx-auto my-3">
-                            <div class="card-img">
+                        <div class="col-lg-6 col-md-6 col-12 mx-auto my-3">
+                            <div class="card-img recent-img">
                                 <img src="images/img24.png" alt=".." class="img-fluid">
                             </div>
                         </div>
 
-                        <div id="imageModal" class="d-none">
-                            <div class="modal-content d-flex gap-3 align-items-center flex-lg-row flex-column">
+                        <div id="imageModal" class="">
+                            <div class="modal-content d-flex gap-3 align-items-center flex-lg-row flex-md-row flex-column">
                                 <span class="close">&times;</span>
                                 <img id="modalImg" src="images/img23.jpg" alt="..." class="img-fluid">
                                 <div class="image-details text-start">
-                                    <h4 id="modalTitle">Universe University</h4>
+                                    <h4 class="fw-bold m-0 p-0" id="modalTitle">Universe University</h4>
                                     <div id="modalDescription">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus qui sequi vitae cupiditate! Officiis hic ea ullam? Similique ea cumque officiis, est non illo.</p>
-                                        <p>
-                                            <i class="fa fa-link"></i>
-                                            <span><a href="http://" 
-                                            target="_blank" rel="noopener noreferrer" class="mt-auto">universeuniversity.vercel.app</a></span>
+                                        <p class="m-0 p-0">Universe is an informative university website developed as assesment.</p>
+                                        <p class="m-0 p-0 mt-3">Year developed: 2024</p>
+                                        <p class="m-0 p-0 my-1">Technologies: HTML, CSS, bootStrap and Javascript</p>
+                                        <p class="m-0 p-0">View: <a href="http://universeuniversity.vercel.app" target="_blank" rel="noopener noreferrer" class="mt-auto">universeuniversity.vercel.app</a>
                                         </p>
                                     </div>
                                 </div>
@@ -396,7 +420,7 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <section class="resume py-5" id="resume">
                 <div class="container">
@@ -822,9 +846,91 @@
 
     </main>
 
+    
+    <script>
+        const recents = [
+  {
+    title: "Universe University",
+    image: "img23.jpg",
+    description: "Universe is an informative university website developed as assesment.",
+    yearDeveloped: "2024",
+    techUsed: "HTML, CSS, bootStrap and Javascript",
+    viewURL: "universeuniversity.vercel.app",
+  },
+  {
+    title: "Mediconnect",
+    image: "img22.png",
+    description: "Mediconnect is a landing page built for a telemedecine system",
+    yearDeveloped: "2024",
+    techUsed: "HTML, CSS, bootStrap and Javascript",
+    viewURL: "mediconnect.netlify.app",
+  },
+  {
+    title: "Aurora Blog",
+    image: "img24.png",
+    description: "Aurora blog is a landing page featuring blogs.",
+    yearDeveloped: "2024",
+    techUsed: "HTML, CSS, bootStrap and Javascript",
+    viewURL: "aurorablogger.netlify.app",
+  },
+]
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+// recents.map(({ title, image, description, yearDeveloped, techUsed, viewURL}, index) => {
+//   `<div class="col-lg-6 col-md-6 col-12 mx-auto my-3">
+//       <div class="card-img">
+//           <img src="images/${image}" alt="${title}" class="img-fluid">
+//       </div>
+//   </div>`
+// })
+
+// Modal functionality
+
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+const closeModal = document.querySelector('.close');
+
+let recentImgs = document.querySelectorAll('.recent-img')
+
+// Handle click event on each image in the slider
+recentImgs.forEach((img, index) => {
+  if (img) {
+    console.log("seen one");
+  }
+  img.addEventListener('click', () => {
+      console.log("clicked");
+      // Set the clicked image in the modal
+      modalImg.src = img.src;
+      modalTitle.textContent = recents[index].title;
+      modalDescription.textContent = recents[index].description;
+
+      // Display the modal
+      modal.style.display = 'flex';
+
+      // Add transition effect for the modal content
+      document.querySelector('.modal-content').style.transform = 'scale(1)';
+  });
+});
+
+// Close the modal when the close button is clicked
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Close the modal when clicked outside the modal content
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+      modal.style.display = 'none';
+  }
+});
+    </script>
+
     <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
    
 </body>

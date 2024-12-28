@@ -1,12 +1,12 @@
-AOS.init();
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   setTimeout(function() {
-//     document.querySelector('.terminal-loader').style.display = 'none';
-//     document.querySelector('.mainContent').style.display = 'block';
-//   }, 5000);
-// });
+
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+    document.querySelector('.terminal-loader').style.display = 'none';
+    document.querySelector('.mainContent').style.display = 'block';
+  }, 5000);
+});
 
 const backToTop = document.querySelector(".backToTop");
 let prevScrollPos = window.pageYOffset;
@@ -14,7 +14,6 @@ let prevScrollPos = window.pageYOffset;
 window.onscroll = function() {
   let currentScrollPos = window.pageYOffset;
 
-  // Show the back-to-top button when scrolling down
   if (currentScrollPos > 100) {
     if (prevScrollPos < currentScrollPos) {
       backToTop.classList.add("show"); // Add the sliding animation
@@ -36,3 +35,5 @@ menuIcon.addEventListener('click', function() {
     navbarMenu.classList.toggle('show');
     menuIcon.classList.toggle('open'); // Add the active class to transform the icon
 });
+
+
