@@ -26,6 +26,7 @@
     .skill .card p.ab,
     .recents .card p.ab,
     .services .card p.ab,
+    .stories .card p.ab,
     .contact .card p.ab{
         width: 100% !important;
     }

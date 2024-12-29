@@ -215,13 +215,14 @@ footer .copyright{
     background: radial-gradient(#7947df, #30185e, #0f0715, #0f0715);
     background-position: center;
 }
-.recent .col .card-img{
+.recent .card-img{
     background: #0000009f;
-    border: 2px solid #7947df;
-    border-radius: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
     overflow: hidden;
+    cursor: pointer;
 }
-.recent .col .card-img:hover img{
+.recent .card-img:hover img{
     transform: scale(1.05);
     transition: all .2s;
 }
@@ -445,6 +446,7 @@ footer .copyright{
 }
 .skill .card p.ab,
 .recents .card p.ab,
+.stories .card p.ab,
 .services .card p.ab{
     width: 63%;
 }
@@ -712,6 +714,8 @@ footer .copyright{
 }
 #imageModal .modal-content{
     border: 2px solid #30185e;
+    border: 2px solid #7a47df77;
+    overflow: hidden;
     background-color: #140c1c;
     /* 0f0715 */
     margin: auto;
@@ -725,7 +729,7 @@ footer .copyright{
 }
 #imageModal img{
     border: 2px solid #f7f7f7;
-    max-width: 40%;
+    max-width: 50%;
     max-height: 100%;
     border-radius: 10px;
     object-fit: contain;
@@ -733,19 +737,25 @@ footer .copyright{
 }
 #imageModal .image-details{
     /* border: 2px solid #0000cd; */
-    line-height: 20px;
+    line-height: 16px;
     color: #f7f7f7;
     font-size: 12px;
 }
 #imageModal .close{
     position: absolute;
-    top: 0px;
-    right: 20px;
+    top: .1px;
+    right: 0px;
     color: #fff;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.2s;
+    background: #7a47df45;
+    border: 1px solid #7a47df77;
+    border-top: none;
+    border-right: none;
+    width: 50px;
+    height: 50px;
 }
 #imageModal .close:hover{
     color: #bbb;
