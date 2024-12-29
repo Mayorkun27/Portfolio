@@ -93,17 +93,17 @@
         <div class="overflow-x-hidden">
             
             <nav class="navbar navbar-expand-lg bg-transparent">
-                <div class="container">
+                <div class="container py-0">
                     <a class="navbar-brand d-flex gap-2 align-items-center" href="#">
                         <div class="logo">
                             OA
                         </div>
                         <span class="fw-bold">Oluwamayokun</span>
                     </a>
-                    <div id="menu-icon text-light">
-                        <i class="ti ti-menu d-lg-none"></i>
+                    <div id="menu-icon" class="text-light d-lg-none">
+                        <i class="ti ti-menu"></i>
                     </div>   
-                    <div class="parent gap-4 align-items-center flex flex-row" id="navbar-menu">
+                    <div class="parent gap-4 align-items-center flex flex-lg-row flex-column" id="navbar-menu">
                         <ul class="navbar-nav text-capitalize fw-bold d-flex gap-4 align-items-center  mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link p-0" aria-current="page" href="#services">services</a>
@@ -131,7 +131,7 @@
                 </div>
             </nav>
 
-            <div class="mobile-view">
+            <div class="mobile-view" id="mobileView">
                 <ul class="navbar-nav h-75 text-capitalize fw-bold d-flex flex-column gap-4 align-items-center justify-content-between">
                     <li class="nav-item">
                         <a class="nav-link p-0" aria-current="page" href="#services">services</a>
@@ -161,7 +161,7 @@
                 <div class="container">
                     <div class="row align-items-center justify-content-between h-100">
                         <div class="col col-lg-6 col-md-7 col-12">
-                            <div class="card bg-transparent text-light mt-lg-5 py-3 pe-3">
+                            <div class="card bg-transparent border-0 text-light mt-lg-5 py-3 pe-3">
                                 <h3 class="card-intro">I'm Oluwamayokun</h3>
                                 <h1 class="card-title stack fw-bold" style="font-size: 2.8rem;">Front End Web Developer</h1>
                                 <p class="card-text lh-4 mt-1"> I break down complex user-experience problems to create integritiy-focused solutions that connect billions of people</p>
@@ -295,7 +295,7 @@
                 </div>
             </section>
 
-            <section class="recents py-5" id="recents">
+            <!-- <section class="recents py-5" id="recents">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 mb-5">
@@ -306,7 +306,7 @@
                         </div>
                     </div>
                     <div class="row recent justify-content-between p-3 recent-imgs">
-                        <!-- <div class="col col-12">
+                        <div class="col col-12">
                             <div class="banner">
                                 <div class="slider" style="--quantity: 10">
                                     <div class="item" style="--position: 1">
@@ -385,7 +385,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div> 
                         <div class="col-lg-6 col-md-6 col-12 mx-auto my-3">
                             <div class="card-img recent-img">
                                 <img src="images/img22.png" alt=".." class="img-fluid">
@@ -400,9 +400,11 @@
                             <div class="card-img recent-img">
                                 <img src="images/img24.png" alt=".." class="img-fluid">
                             </div>
-                        </div>
+                        </div>-->
 
-                        <div id="imageModal" class="">
+                        
+
+                        <!-- <div id="imageModal" class="">
                             <div class="modal-content d-flex gap-3 align-items-center flex-lg-row flex-md-row flex-column">
                                 <span class="close">&times;</span>
                                 <img id="modalImg" src="images/img23.jpg" alt="..." class="img-fluid">
@@ -420,8 +422,46 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
+            <section class="recents py-5" id="recents">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 mb-5">
+                            <div class="card bg-transparent text-center">
+                                <h1 class="card-title text-capitalize recents-h1">my recent works</h1>
+                                <p class="card-text ab text-light mx-auto">
+                                    We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row recent justify-content-between p-3" id="recentsContainer">
+                        <!-- Recents will be dynamically inserted here -->
+                    </div>
+            
+                    <!-- Modal for image preview -->
+                    <div id="imageModal" class="recent">
+                        <div class="modal-content d-flex gap-3 align-items-center flex-lg-row flex-md-row flex-column">
+                            <span class="close">&times;</span>
+                            <img id="modalImg" src="" alt="..." class="img-fluid">
+                            <div class="image-details text-start">
+                                <h4 class="fw-bold m-0 p-0" id="modalTitle"></h4>
+                                <div id="modalDescription">
+                                    <p id="modalDescText" class="m-0 p-0"></p>
+                                    <p class="m-0 p-0 mt-3" id="modalYear"></p>
+                                    <p class="m-0 p-0 my-1" id="modalTech"></p>
+                                    <p class="m-0 p-0">
+                                        View: 
+                                        <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer" class="mt-auto"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
             <section class="resume py-5" id="resume">
                 <div class="container">
                     <div class="row">
@@ -847,7 +887,7 @@
     </main>
 
     
-    <script>
+    <!-- <script>
         const recents = [
   {
     title: "Universe University",
@@ -924,13 +964,95 @@ window.addEventListener('click', (e) => {
       modal.style.display = 'none';
   }
 });
-    </script>
+    </script> -->
 
-    <script src="script.js"></script>
+    <script>
+        const recents = [
+    {
+        title: "Universe University",
+        image: "images/img23.jpg",
+        description: "Universe is an informative university website developed as assessment.",
+        yearDeveloped: "2024",
+        techUsed: "HTML, CSS, Bootstrap, and JavaScript",
+        viewURL: "https://universeuniversity.vercel.app",
+    },
+    {
+        title: "Mediconnect",
+        image: "images/img22.png",
+        description: "Mediconnect is a landing page built for a telemedicine system.",
+        yearDeveloped: "2024",
+        techUsed: "HTML, CSS, Bootstrap, and JavaScript",
+        viewURL: "https://mediconnect.netlify.app",
+    },
+    {
+        title: "Aurora Blog",
+        image: "images/img24.png",
+        description: "Aurora Blog is a landing page featuring blogs.",
+        yearDeveloped: "2024",
+        techUsed: "HTML, CSS, Bootstrap, and JavaScript",
+        viewURL: "https://aurorablogger.netlify.app",
+    },
+];
+
+const recentsContainer = document.getElementById("recentsContainer");
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescText = document.getElementById("modalDescText");
+const modalYear = document.getElementById("modalYear");
+const modalTech = document.getElementById("modalTech");
+const modalLink = document.getElementById("modalLink");
+const closeModal = document.querySelector(".close");
+
+// Dynamically populate recents
+recents.forEach((recent, index) => {
+    const recentCard = `
+        <div class="col-lg-6 col-md-6 col-12 mx-auto my-3">
+            <div class="card-img recent-img" data-index="${index}">
+                <img src="${recent.image}" alt="${recent.title}" class="img-fluid">
+            </div>
+        </div>
+    `;
+    recentsContainer.innerHTML += recentCard;
+});
+
+// Handle click events to open the modal
+document.querySelectorAll(".recent-img").forEach((imgElement) => {
+    imgElement.addEventListener("click", (e) => {
+        const index = e.currentTarget.dataset.index;
+        const { title, image, description, yearDeveloped, techUsed, viewURL } = recents[index];
+
+        // Set modal content
+        modalImg.src = image;
+        modalTitle.textContent = title;
+        modalDescText.textContent = description;
+        modalYear.textContent = `Year Developed: ${yearDeveloped}`;
+        modalTech.textContent = `Technologies: ${techUsed}`;
+        modalLink.href = viewURL;
+        modalLink.textContent = viewURL;
+
+        // Show modal
+        modal.style.display = "flex";
+    });
+});
+
+// Close modal
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
    
 </body>

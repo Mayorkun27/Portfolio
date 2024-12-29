@@ -29,11 +29,26 @@ window.onscroll = function() {
 
 
 const menuIcon = document.getElementById('menu-icon');
-const navbarMenu = document.getElementById('navbar-menu');
+const mobileView = document.getElementById('mobileView');
+const closeMobileNav = document.getElementById('closeMobileNav');
 
 menuIcon.addEventListener('click', function() {
-    navbarMenu.classList.toggle('show');
-    menuIcon.classList.toggle('open'); // Add the active class to transform the icon
+  mobileView.classList.toggle('show');
+  menuIcon.classList.toggle('open'); // Add the active class to transform the icon
+  console.log("clicked");
 });
 
+closeMobileNav.addEventListener('click', function() {
+  mobileView.classList.toggle('show');
+  menuIcon.classList.toggle('open'); // Add the active class to transform the icon
+});
+
+const links = document.querySelectorAll(".mobile-view .nav-link");
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    if (mobileView.classList.contains("show")) {
+      mobileView.classList.remove("show");
+    }
+  });
+});
 
