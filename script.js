@@ -23,7 +23,7 @@ const recents = [
       description: "Mediconnect is a landing page built for a telemedicine system.",
       yearDeveloped: "2024",
       techUsed: "HTML, CSS, Bootstrap, and JavaScript",
-      viewURL: "https://mediconnect.netlify.app",
+      viewURL: "https://telemediconnect.netlify.app",
   },
   {
       title: "Aurora Blog",

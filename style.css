@@ -114,8 +114,8 @@ nav .navbar-brand:hover,
     height: 100%;
     opacity: 10%;
     color: transparent;
-    background-clip: text;
     background: #28282220;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-stroke: 2px #ffffffee;
     font-size: 9rem;
@@ -189,11 +189,14 @@ footer .copyright{
     border-radius: 100px;
 }
 .download button a{
-    color: #7947df;
+    color: #7947df !important;
+}
+.download button:hover a{
+    color: white !important;
 }
 .download button:hover,
 .herosection .socials i:hover{
-   color: white;
+   color: white !important;
    border: 1px solid #7947df;
    background: #7947df;
    a{
@@ -253,17 +256,16 @@ footer .copyright{
 .skill-card .card-text{
     color: #7947df;
 }
-.skill-card .ratep{
-    color: #747779;
-}
 .skill-img{
     background: #140c1c;
     border-radius: 30px;
     /* color: #747779; */
     border: 1.5px solid #140c1c;
+    filter: grayscale();
 }
 .skill-img:hover{
     border: 1.5px solid #7947df;
+    filter: none;
     background: #31185e88;
     transition: all 1s;
     .ratep{
@@ -436,12 +438,16 @@ footer .copyright{
     grid-row: span 1;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
+    gap: 20px;
     color: #fff;
     border-radius: 0px;
     cursor: pointer;
     border-bottom: 1px solid #7947df;
     .serve-right .num{
         color: #7947df;
+    }
+    h3{
+        white-space: nowrap;
     }
 }
 .skill .card p.ab,
@@ -593,7 +599,7 @@ footer .copyright{
     cursor: pointer;
     width: 50px;
     height: 50px;
-    font-size: 5rem !important;
+    font-size: 1.5rem !important;
     transition: all 0.4s ease;
     display: flex;
     justify-content: center;
@@ -618,7 +624,7 @@ footer .copyright{
     transform: rotate(90deg);
 }
 #menu-icon.open::after{
-    transform:open rotate(-90deg);
+    transform: open rotate(-90deg);
 }
 #navbar-menu{
     display: flex;
@@ -651,11 +657,27 @@ footer .copyright{
 
 }
 #closeMobileNav{
-    top: 10px;
-    right: 10px;
-    background: #7a47df45;
-    border: 1px solid #7a47df77;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%) translateY(30px);
+    /* background: #7a47df45;
+    border: 1px solid #7a47df77; */
+    background: #7a47dfe9;
+    border: 5px solid #0f0715;
+    width: 80px;
+    height: 80px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 50% 50% 0 0;
+    font-size: 3rem;
+    box-shadow: 3px 3px 10px #0f0715;
+    z-index: 10;
 }
+/* #closeMobileNav span{
+    margin-top: -5px;
+    margin-left: -5px;
+} */
 .mobile-view ul li{
     -webkit-box-reflect: below -15px
         linear-gradient(transparent, #7a47df1c)
