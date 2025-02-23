@@ -587,6 +587,9 @@ footer .copyright{
         max-width: 90% !important;
         max-height: 80%;
     }
+    .skill-img{
+        filter: none;
+    }
 }
 @media (max-width: 475px) {
     #imageModal img{
