@@ -504,6 +504,14 @@ footer .copyright{
     height: 100%;
     
 }
+.recents .recent .card-img.recent-img {
+    height: 220px;
+}
+.recents .recent .card-img.recent-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 .recents .recent swiper-slide {
     width: 80%;
 }
