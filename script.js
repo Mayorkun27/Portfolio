@@ -10,6 +10,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const recents = [
   {
+      title: "Guardian Syndicate",
+      image: "images/pro5.jpg",
+      description: "Guardian Syndicate is a website developed for a web3 team moderators about.",
+      yearDeveloped: "2025",
+      techUsed: "HTML, CSS, SASS, Bootstrap, and JavaScript",
+      viewURL: "https://www.guardiansyndicate.agency/",
+  },
+  {
+      title: "Pineleaf Estates",
+      image: "images/pro4.png",
+      description: "A website for a real estate company (Pineleaf Estates).",
+      yearDeveloped: "2025",
+      techUsed: "React, Tailwindcss, Framer motion, and more",
+      viewURL: "https://pineleafestates.com/",
+  },
+  {
+      title: "Wellthrix International",
+      image: "images/pro2.png",
+      description: "This website was created for a multi-level marketing company.",
+      yearDeveloped: "2025",
+      techUsed: "React, Tailwindcss, Framer motion, and more",
+      viewURL: "https://wellthrixinternational.com",
+  },
+  {
       title: "Universe University",
       image: "images/img23.jpg",
       description: "Universe is an informative university website developed as assessment.",
